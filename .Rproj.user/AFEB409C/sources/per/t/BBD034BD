@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1523999668589.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1203252542",
+    "id" : "BBD034BD",
+    "lastKnownWriteTime" : 1523923266,
+    "last_content_update" : 1523923266,
+    "path" : "~/Desktop/CSE578/final/final/scripts/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

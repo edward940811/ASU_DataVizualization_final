@@ -1,0 +1,46 @@
+# Libraries
+
+require(rJava)
+require(shinyjs)
+require(RODBC)
+require(RODBCext)
+require(shiny)
+require(shinydashboard)
+require(plotly)
+require(ggplot2)
+require(DT)
+require(sqldf)
+require(data.table)
+require(shinyBS)
+require(reshape2)
+require(rAmCharts)
+require(stringr)
+require(janeaustenr)
+require(tidytext)
+require(dplyr)
+require(tidyr)
+require(googleVis)
+
+
+# shiny::runApp(appDir = 'C:\\Users\\Ashish\\ASU Backup\\ASU Grad School\\Semester 2 (Spring 2018)\\Courses\\DV\\Project\\scripts', host='192.168.0.6', port = 9001, launch.browser = F)
+
+WD <- getwd()
+print(WD)
+
+df1 <- read.csv("/Users/liushi-hao/Desktop/CSE578/final/stackoverflow-data/01_01_2014-12_31_2014[1].csv")
+df2 <- read.csv("/Users/liushi-hao/Desktop/CSE578/final/stackoverflow-data/01_01_2014-12_31_2014[2].csv")
+
+#df <- rbind(df1, df2)
+df <- read.csv("/Users/liushi-hao/Desktop/CSE578/final/final/data2.csv")
+df$time <- as.POSIXct(df$time, origin = "1969-01-01", tz = "")
+df <- separate(data = df, col = time, into = c("date", "time"), sep = " ")
+df <- separate(data = df, col = date, into = c("year", "month", "day"), sep = "-")
+df$frequency <- str_count(df$tag,'\\w+')
+
+
+
+
+data <- readRDS("C:/Users/Ashish/ASU Backup/ASU Grad School/Semester 2 (Spring 2018)/Courses/DV/Project/Stack_data_formed2014-20180405T172047Z-001/healthexp.Rds")
+data$Region <- as.factor(data$Region)
+
+
